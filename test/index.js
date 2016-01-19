@@ -86,6 +86,9 @@ describe('----------------------------fibx-router--------------------------\r\n'
         it('error route', function() {
             var r = http.request('post', 'http://127.0.0.1:7758/base/papapsda?h=hello_base');
             assert.equal(r.read().toString(), 'error');
+
+            var r = http.request('get', 'http://127.0.0.1:7758/metho');
+            assert.equal(r.read().toString(), 'error');
         });
 
         it('route params', function() {
