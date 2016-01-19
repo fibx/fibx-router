@@ -1,0 +1,8 @@
+test
+.modules
+node_modules
+doc
+example
+perf
+npm-debug.log
+.idea
