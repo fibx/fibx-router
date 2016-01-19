@@ -9,6 +9,7 @@ npm install fibjs-fibx-router
 ##Test				
 
 ```javascript
+npm install --save-dev
 npm test
 ```
 
