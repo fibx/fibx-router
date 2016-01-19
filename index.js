@@ -126,7 +126,7 @@ function findPath(method, path) {
         return cacheResult.p;
     } else {
         for (var _regex in this._map[method]) {
-            var regex = re.compile('^' + this._base + _regex + '$');                     //TODO: better
+            var regex = new RegExp('^' + this._base + _regex + '$');                     //TODO: better
             if (regex.test(path)) {
                 this._cache.put(path, {
                     m: method,
