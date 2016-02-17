@@ -36,8 +36,8 @@ Router.prototype = {
         return function(next) {
 
             var method = this.method.toLowerCase();
-            //var methodSim = this.query._method || this.request.body._method;
-            var methodSim = this.request.body._method;
+            //var methodSim = this.query._method || this.form._method;
+            var methodSim = this.form._method;
             var path = this.path, regexPath;
 
             var l = path.length - 1;
