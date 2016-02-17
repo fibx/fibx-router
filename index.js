@@ -94,13 +94,10 @@ function extractParams(that, regexPath, requestPath) {
 function exec(that, method, regexPath) {
 
     var executive = that._map[method][regexPath];
-    if (typeof executive !== 'function') {
-        if (that._map['all'][regexPath]) {
-            executive = that._map['all'][regexPath].concat(executive);
-        }
-        that._map[method][regexPath] = connect.call(this, executive);
+    if (that._map['all'][regexPath]) {
+        executive = that._map['all'][regexPath].concat(executive);
     }
-    that._map[method][regexPath].call(this);
+    connect.call(this, executive).call(this);
 }
 
 function filterMethod(method, methodSim) {
