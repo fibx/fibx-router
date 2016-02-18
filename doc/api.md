@@ -24,6 +24,11 @@ var option = {
     base: String             //路由的基础路径 
 }
 
+var app = require('fibjs-fibx')();
+var route = require('fibjs-fibx-router')(option);
+
+app.use('/', route.getAllRoute());
+
 ```       
 
 * size: 为了对提升性能,对请求的路径做了缓存,下一次相同的请求路径就不用重复分析,size 就是此缓存的大小       
