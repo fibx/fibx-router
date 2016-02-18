@@ -143,6 +143,11 @@ describe('----------------------------fibx-router--------------------------\r\n'
             assert.equal(r.read().toString(), 'hello exec more' + 5);
         });
 
+        it('next can return value', function(){
+            var r = http.request('get', 'http://127.0.0.1:7758/exec/next');
+            assert.equal(r.read().toString(), 'next successful!');
+        });
+
         it('executive body feature ok', function() {
             var r = http.request('get', 'http://127.0.0.1:7758/aa');
             assert.equal(r.read().toString(), 'all2');

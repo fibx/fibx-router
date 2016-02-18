@@ -89,6 +89,12 @@ function run(app) {
         this.body = this.query.h + ' exec more' + n;
     });
 
+    router.get('/exec/next', function(next) {
+        this.body = next();
+    }, function(){
+        return 'next successful!'
+    });
+
     /** params **/
     router.post('/params/:hello', function() {
         this.body = this.params.hello;
