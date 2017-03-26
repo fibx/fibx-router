@@ -6,8 +6,8 @@
 
 ```javascript
 
-var app = require('fibjs-fibx')();
-var route = require('fibjs-fibx-router')();
+var app = require('@fibjs/fibx')();
+var route = require('@fibjs/fibx-router')();
 
 app.use('/', route.getAllRoute());
 
@@ -24,8 +24,8 @@ var option = {
     base: String             //路由的基础路径
 }
 
-var app = require('fibjs-fibx')();
-var route = require('fibjs-fibx-router')(option);
+var app = require('@fibjs/fibx')();
+var route = require('@fibjs/fibx-router')(option);
 
 app.use('/', route.getAllRoute());
 
@@ -60,8 +60,8 @@ all 提供各个路由的统一执行体, 不提供路由能力, 就是不管是
 
 ```javascript
 
-var app = require('fibjs-fibx')();
-var route = require('fibjs-fibx-router')();
+var app = require('@fibjs/fibx')();
+var route = require('@fibjs/fibx-router')();
 
 route.get('/hirube', function(next){
     this.body = next(1);															//页面输出2

@@ -1,4 +1,4 @@
-var app = require('fibjs-fibx')();
+var app = require('@fibjs/fibx')();
 var route = require('../index')({
     fixSlash: true,
     simulation: true,
@@ -43,6 +43,3 @@ app.use('/', route.getAllRoute());
 console.log('you can open browser, input 127.0.0.1:7759/hello    and more~');
 
 app.listen(7759);
-
-
-
