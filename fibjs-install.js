@@ -2,8 +2,10 @@ var fs = require('fs');
 var os = require('os');
 var process = require('process');
 
-var modulesPath = '../../.modules';
 var moduleName = JSON.parse(fs.readFile('package.json').toString()).name;
+var isInGroup = /@.*\/.*/.test(moduleName);
+var modulesPath = isInGroup ? `../../../modules/${moduleName}` : `../../.modules/${moduleName}`;
+var execStr = isInGroup ? `ln -s ../../node_modules/${moduleName}` : `${modulesPath}`;
 
 var isExists = fs.exists(modulesPath);
 !isExists && fs.mkdir(modulesPath);
@@ -11,10 +13,10 @@ var isExists = fs.exists(modulesPath);
 switch (os.type) {
     case 'Linux':
     case 'Darwin':
-        process.exec('ln -s ../node_modules/' + moduleName + ' ' + modulesPath + '/' + moduleName);
+        process.exec(execStr);
         break;
     case 'Windows':
         break;
     default :
-        process.exec('ln -s ../node_modules/' + moduleName + ' ' + modulesPath + '/' + moduleName);
+        process.exec(execStr);
 }

@@ -1,6 +1,6 @@
 var coroutine = require("coroutine");
 var http = require('http');
-var app = require('fibjs-fibx')();
+var app = require('@fibjs/fibx')();
 var run = require('./server')(app);
 
 coroutine.start(run);
