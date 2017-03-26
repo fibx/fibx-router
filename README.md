@@ -1,19 +1,19 @@
-#fibx-router
+# fibx-router
 
-##Installation
+## Installation
 
 ```javascript    
-npm install fibjs-fibx-router				
+npm install @fibjs/fibx-router		
 ```
 
-##Test				
+## Test				
 
 ```javascript
 npm install --save-dev
 npm test
 ```
 
-##Example
+## Example
 
 ```javascript
 var app = require('fibjs-fibx')();
@@ -63,11 +63,11 @@ console.log('you can open browser, input 127.0.0.1:7759/hello    and more~');
 app.listen(7759);
 ```
 
-##Api
+## Api
 
 [API Doc](https://github.com/fibx/fibx-router/blob/master/doc/api.md)
 
-##Other
+## Other
 
 如果你想写一个 fibjs 模块上传到 npm,必须像本项目在目录下放如 fibjs-install.js 的文件.							
 
@@ -92,13 +92,13 @@ switch (os.type) {
 ```
 
 然后在 package.json 中添加     
-  
+
 ```json					
 "scripts": {
     "install": "fibjs fibjs-install.js",
  }
 ```   
 
-##Next
+## Next
 
 * 对 route 使用 () 捕获参数的支持
