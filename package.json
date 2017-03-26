@@ -20,7 +20,7 @@
     "middleware"
   ],
   "author": "Rube",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/fibx/fibx-router/issues"
   },
