@@ -1,6 +1,6 @@
 {
   "name": "@fibjs/fibx-router",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "fibx router middlewave",
   "main": "index.js",
   "scripts": {

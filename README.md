@@ -16,8 +16,8 @@ npm test
 ## Example
 
 ```javascript
-var app = require('fibjs-fibx')();
-var route = require('fibjs-fibx-router')({
+var app = require('@fibjs/fibx')();
+var route = require('@fibjs/fibx-router')({
     fixSlash: true,
     simulation: true,
     size: 200

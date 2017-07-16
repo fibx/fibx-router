@@ -125,7 +125,7 @@ function findPath(method, path) {
         for (var _regex in this._map[method]) {
             var regex = new RegExp('^' + this._base + _regex + '$');                     //TODO: better
             if (regex.test(path)) {
-                this._cache.put(path, {
+                this._cache.set(path, {
                     m: method,
                     p: _regex
                 });
