@@ -55,12 +55,12 @@ describe('----------------------------fibx-router--------------------------\r\n'
         });
 
         it('put simulation', function() {
-            var r = http.request('post', 'http://127.0.0.1:7758/sim/method', "_method=put", {"Content-type": "application/x-www-form-urlencoded"});
+            var r = http.request('post', 'http://127.0.0.1:7758/sim/method', {body :"_method=put", headers: {"Content-type": "application/x-www-form-urlencoded"}});
             assert.equal(r.read().toString(), 'put');
         });
 
         it('delete simulation', function() {
-            var r = http.request('post', 'http://127.0.0.1:7758/sim/method', "_method=delete", {"Content-type": "application/x-www-form-urlencoded"});
+            var r = http.request('post', 'http://127.0.0.1:7758/sim/method', {body: "_method=delete", headers: {"Content-type": "application/x-www-form-urlencoded"}});
             assert.equal(r.read().toString(), 'delete');
         });
     });

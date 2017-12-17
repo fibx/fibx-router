@@ -1,6 +1,5 @@
 'use strict';
 
-var re = require('re');
 var util = require('util');
 
 var error = require('./lib/error');
@@ -81,7 +80,7 @@ function extractParams(that, regexPath, requestPath) {
     }
 
     this.params = this.params || {};
-    var regex = re.compile('^' + that._base + regexPath + '$'),
+    var regex = new RegExp('^' + that._base + regexPath + '$'),
         params = regex.exec(requestPath),
         _this = this;
 

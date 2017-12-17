@@ -127,7 +127,7 @@ function run(app) {
         this.body = 'regex4 ok--' + this.params.hello;
     });
 
-    app.use('/', router.getAllRoute());
+    app.use('(.*)', router.getAllRoute());
 
     app.listen(7758);
 }

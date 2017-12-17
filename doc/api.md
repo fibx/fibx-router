@@ -9,7 +9,7 @@
 var app = require('@fibjs/fibx')();
 var route = require('@fibjs/fibx-router')();
 
-app.use('/', route.getAllRoute());
+app.use('(.*)', route.getAllRoute());
 
 ```
 
@@ -27,7 +27,7 @@ var option = {
 var app = require('@fibjs/fibx')();
 var route = require('@fibjs/fibx-router')(option);
 
-app.use('/', route.getAllRoute());
+app.use('(.*)', route.getAllRoute());
 
 ```       
 
@@ -69,7 +69,7 @@ route.get('/hirube', function(next){
     return value+1;
 });
 
-app.use('/', route.getAllRoute());
+app.use('(.*)', route.getAllRoute());
 
 
 ```

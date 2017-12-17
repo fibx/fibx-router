@@ -56,7 +56,7 @@ app.use(function(next) {
     }
 });
 
-app.use('/', route.getAllRoute());
+app.use('(.*)', route.getAllRoute());
 
 console.log('you can open browser, input 127.0.0.1:7759/hello    and more~');
 
